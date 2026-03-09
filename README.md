@@ -17,3 +17,9 @@ Tecnologias usadas: Python, Docker, Redis, Mongo, Scylla e Neo4j
 
 
 
+### ⚠️ Notas de Versão
+O driver do ScyllaDB foi desativado temporariamente.<br>
+Motivo: Incompatibilidade com Python 3.14.
+
+
+
