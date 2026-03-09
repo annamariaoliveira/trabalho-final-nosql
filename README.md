@@ -2,9 +2,9 @@
 # trabalho-final-nosql
 Trabalho final da disciplina de banco de dados NoSQL
 
-Aluno(a): Anna Maria do Nascimento Oliveira /n
-Matricula: 2527027 /n
-Tecnologias usadas: Python, Docker, Redis, Mongo, Scylla e Neo4j /n
+Aluno(a): Anna Maria do Nascimento Oliveira n/
+Matricula: 2527027 n/
+Tecnologias usadas: Python, Docker, Redis, Mongo, Scylla e Neo4j n/
 
 - Bancos todos executando:
 <img width="1901" height="528" alt="image" src="https://github.com/user-attachments/assets/a4e4078c-f3ee-46f3-a525-561ff9813886" />
