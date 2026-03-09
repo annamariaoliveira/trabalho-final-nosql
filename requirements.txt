@@ -1,0 +1,7 @@
+redis
+pymongo
+cassandra-driver
+neo4j
+requests
+
+#rodar no termianl python -m pip install -r requirements.txt

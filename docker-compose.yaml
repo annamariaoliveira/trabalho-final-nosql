@@ -1,0 +1,52 @@
+version: '3.8'
+services:
+  redis-aula:
+    image: redis:alpine
+    container_name: redis-aula
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - rede-aula
+  mongo-aulas:
+    image: mongo:4.4.29  # <--- Versão mais estável para evitar erros de execução
+    container_name: mongo-aulas
+    platform: linux/amd64
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - rede-aula
+  scylla-aula:
+    image: scylladb/scylla
+    container_name: scylla-aula
+    ports:
+      - "9042:9042" 
+    command: --smp 1 --memory 750M 
+    networks:
+      - rede-aula
+  neo4j-aula:
+    image: neo4j:latest
+    container_name: neo4j-aula
+    ports:
+      - "7474:7474" 
+      - "7687:7687" 
+    volumes:
+      - neo4j_data:/data
+    environment:
+      - NEO4J_AUTH=neo4j/aluno123
+      - NEO4J_dbms_memory_heap_initial__size=256m
+      - NEO4J_dbms_memory_heap_max__size=512m
+    networks:
+      - rede-aula
+volumes:
+  redis_data:
+  mongo_data:
+  scylla_data:
+  neo4j_data:
+networks:
+  rede-aula:
+    driver: bridge
